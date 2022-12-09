@@ -1,0 +1,29 @@
+#xoxlov: aliases for good operationing
+alias x="exit"
+alias ..="cd .."
+alias cd.="cd .."
+alias cd..="cd .."
+alias sl="ls"
+alias cl="clear"
+alias tm="tmux --attach | tmux -2 new"
+alias update="sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y"
+alias install="sudo apt install"
+
+# desktop and console
+alias gnomefix='dbus-send --type=method_call --dest=org.gnome.Shell org.gnome.Shell.Eval string:"global.reexec_self()"'
+# add timestamp in history, then 'history' command should print smth like:
+# 2001  2022-11-24 12:15:03 export HISTTIMEFORMAT="%F %T "
+# 2002  2022-11-24 12:15:06 ls
+export HISTTIMEFORMAT="%F %T "
+
+# ssh operations
+alias sshi="ssh -i ~/.ssh/buildbox.pem "
+alias scpi="scp -i ~/.ssh/buildbox.pem "
+
+# git operations
+alias ga="git add"
+alias gm="git commit -m"
+alias gs="git status"
+alias gl='git log --pretty=format:"%H %an [%as] %s" --graph'
+alias rebase="git pull --rebase upstream master"
+
