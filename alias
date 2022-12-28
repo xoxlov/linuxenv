@@ -1,4 +1,5 @@
 #xoxlov: aliases for good operationing
+alias l='ls -lF'
 alias x="exit"
 alias ..="cd .."
 alias cd.="cd .."

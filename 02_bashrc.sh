@@ -3,7 +3,7 @@
 RCFILE=~/.bashrc
 
 echo " " >> ${RCFILE}
-echo " " >> ${RCFILE}
+sed -i "/^alias l='ls -CF'/# alias l='ls -CF'/" ${RCFILE}
 cat ./alias >> ${RCFILE}
 echo "" >> ${RCFILE}
 
