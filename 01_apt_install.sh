@@ -6,3 +6,6 @@ sudo apt install -y screen
 sudo apt install -y mc
 sudo apt install -y doublecmd-gtk
 
+# example of progress watching: cp GhostBSD.vdi /home/tecmint/Downloads/ & progress -mp $!
+sudo apt install -y progress
+
