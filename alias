@@ -11,6 +11,7 @@ alias tm="tmux attach | tmux -2 new"
 alias update="sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y"
 alias install="sudo apt install"
 alias dc="doublecmd &"
+alias python="python3"
 
 # rsync
 # -a for the archive to preserves ownership, permissions, etc.
