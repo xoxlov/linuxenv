@@ -9,6 +9,8 @@ sudo apt install -y binutils
 sudo apt install -y htop
 sudo apt install -y doublecmd-gtk
 sudo apt install -y python3-pip
+sudo apt install -y atop
+sudo apt install -y tree
 pip install --upgrade pip
 
 # example of progress watching: cp GhostBSD.vdi /home/tecmint/Downloads/ & progress -mp $!

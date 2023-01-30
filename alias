@@ -13,6 +13,13 @@ alias install="sudo apt install"
 alias dc="doublecmd &"
 alias python="python3"
 
+# find out the high memory consumption processes in order:
+alias topmem="ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -10"
+# find out the high CPU usage processes in order:
+alias topcpu="ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -10"
+# Top 15 filehandler-consuming process
+find /proc -maxdepth 1 -type d -name '[0-9]*' -exec bash -c "ls {}/fd/ 2>/dev/null | wc -l | tr '\n' ' '" \; -printf "fds (PID = %P) \n" |  sort -rn | head -15
+
 # rsync
 # -a for the archive to preserves ownership, permissions, etc.
 # -v for verbose
