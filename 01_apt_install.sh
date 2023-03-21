@@ -13,6 +13,7 @@ sudo apt install -y htop
 sudo apt install -y atop
 sudo apt install -y tree
 sudo apt install -y taskwarrior
+sudo apt install -y tldr
 pip install --upgrade pip
 
 # example of progress watching: cp GhostBSD.vdi /home/tecmint/Downloads/ & progress -mp $!
@@ -26,3 +27,6 @@ sudo apt-get update
 sudo apt-get install git -y
 git --version
 
+# http://ytdl-org.github.io/youtube-dl/download.html
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
