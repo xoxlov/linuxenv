@@ -1,0 +1,10 @@
+# add timestamp in history, then 'history' command should print smth like:
+# 2001  2022-11-24 12:15:03 export HISTTIMEFORMAT="%F %T "
+# 2002  2022-11-24 12:15:06 ls
+export HISTTIMEFORMAT="%F %T "
+
+# VARS
+export MYBASHRC="${HOME}/.bashrc"
+export MYVIMRC="${HOME}/.vimrc"
+export MYTMUXRC="${HOME}/.tmux.conf"
+export MYTMUXGO="${HOME}/.tmux/go.sh"
