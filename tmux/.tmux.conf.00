@@ -1,0 +1,26 @@
+set -g default-terminal "screen-256color"
+
+#re-bind trigger from [Ctrl + b] to [Alt + a]
+unbind C-b
+set-option -g prefix M-a
+bind-key M-a send-prefix
+
+set -g mouse on
+
+# Set inactive/active window styles
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=black'
+## set the pane border colors 
+#set -g pane-border-style 'fg=colour235,bg=colour238' 
+#set -g pane-active-border-style 'fg=colour51,bg=colour236'
+
+# Set status bar
+set -g status-bg black
+set -g status-fg white
+#set -g window-status-current-style bg=red
+#set -g status-left ‘#[fg=green,bg=blue]#H’
+set -g status-left "#{=30:}#H - Session #S"
+#set -g status-right "%H:%M"
+# Set window notifications
+setw -g monitor-activity on
+set -g visual-activity on

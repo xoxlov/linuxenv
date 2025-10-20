@@ -7,6 +7,7 @@ sudo apt install -y mc
 sudo apt install -y curl
 sudo apt install -y binutils
 sudo apt install -y doublecmd-gtk
+sudo apt install -y python3
 sudo apt install -y python3-pip
 sudo apt install -y ipython3
 sudo apt install -y htop
@@ -14,6 +15,10 @@ sudo apt install -y atop
 sudo apt install -y tree
 sudo apt install -y taskwarrior
 sudo apt install -y tldr
+sudo apt install -y colordiff
+sudo apt install -y highlight
+sudo apt install -y meld
+
 pip install --upgrade pip
 
 # example of progress watching: cp GhostBSD.vdi /home/tecmint/Downloads/ & progress -mp $!
