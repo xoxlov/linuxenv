@@ -2,9 +2,9 @@
 
 sudo apt install -y vim
 sudo apt install -y tmux
-# sudo apt install -y screen
 sudo apt install -y mc
 sudo apt install -y curl
+sudo apt install -y neovim
 sudo apt install -y binutils
 sudo apt install -y doublecmd-gtk
 sudo apt install -y python3
@@ -13,16 +13,19 @@ sudo apt install -y ipython3
 sudo apt install -y htop
 sudo apt install -y atop
 sudo apt install -y tree
-sudo apt install -y taskwarrior
 sudo apt install -y tldr
 sudo apt install -y colordiff
 sudo apt install -y highlight
 sudo apt install -y meld
-
-pip install --upgrade pip
-
+sudo apt install -y cmatrix
+sudo apt install -y tcpdump
+sudo apt install -y zsh
+sudo apt install -y fish
+sudo apt install -y sublime-text
 # example of progress watching: cp GhostBSD.vdi /home/tecmint/Downloads/ & progress -mp $!
 sudo apt install -y progress
+
+pip install --upgrade pip
 
 # install and upgrade git to the latest
 sudo apt install git
@@ -31,6 +34,7 @@ sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
 sudo apt-get install git -y
 git --version
+sudo apt install git-man
 
 ## http://ytdl-org.github.io/youtube-dl/download.html
 #sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
