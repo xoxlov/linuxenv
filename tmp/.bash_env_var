@@ -1,0 +1,26 @@
+# add timestamp in history, then 'history' command should print smth like:
+# 2001  2022-11-24 12:15:03 export HISTTIMEFORMAT="%F %T "
+# 2002  2022-11-24 12:15:06 ls
+export HISTTIMEFORMAT="%F %T "
+
+# VARS
+export MYBASHRC="${HOME}/.bashrc"
+export MYVIMRC="${HOME}/.vimrc"
+export MYTMUXRC="${HOME}/.tmux.conf"
+export MYTMUXGO="${HOME}/.tmux/go.sh"
+
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+XDG_CONFIG_HOME="${HOME}/.config"
+XDG_CACHE_HOME="${HOME}/.cache"
+XDG_DATA_HOME="${HOME}/.local/share"
+XDG_STATE_HOME="${HOME}/.local/state"
+XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}:/run/user/${UID}"
+
+XDG_DATA_DIRS="${XDG_DATA_DIRS}:/usr/local/share:/usr/share"
+XDG_CONFIG_DIRS="${XDG_CONFIG_DIR}:/etc/xdg"
+
+# Это костыль для vim, который позволяет обойти захардкоженное поведение vim и разместить конфиг в любом месте
+export VIMINIT='source $MYVIMRC'
+export VIMHOME=${XDG_CONFIG_HOME:-$HOME/.config}/vim
+export MYVIMRC=$VIMHOME/.vimrc
+
