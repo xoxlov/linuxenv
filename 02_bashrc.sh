@@ -27,8 +27,8 @@ fi
 
 
 # setup bash_prompt shell plugin
-cat ./bash_git >> ${RCFILE}
+cat ./res/bash_git >> ${RCFILE}
 
 
 # create tempporary directory at $HOME
-mkdir -p {HOME}/tmp
+mkdir -p ${HOME}/tmp
