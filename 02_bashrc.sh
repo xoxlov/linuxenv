@@ -5,6 +5,8 @@ RCFILE=~/.bashrc
 # tmux setup
 cp ./res/.tmux.conf ~/
 cp -r ./res/.tmux ~/
+# TODO: check if tpm repo exists
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
 # setup aliases and variables
@@ -26,3 +28,7 @@ fi
 
 # setup bash_prompt shell plugin
 cat ./bash_git >> ${RCFILE}
+
+
+# create tempporary directory at $HOME
+mkdir -p {HOME}/tmp
