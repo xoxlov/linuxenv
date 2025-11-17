@@ -35,6 +35,7 @@ alias gh="history | grep"
 alias path="echo -e ${PATH//:/\\n}"
 alias ports='netstat -tulanp'
 alias ccat="highlight --out-format=ansi"
+alias bat="batcat"
 
 # xoxlov: работа с пмятью и процессами
 alias meminfo='free -m -l -t'
