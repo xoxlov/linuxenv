@@ -7,6 +7,9 @@ cp ./res/.tmux.conf ~/
 cp -r ./res/.tmux ~/
 # TODO: check if tpm repo exists
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# small fix to get rid of 'Receiving error 127 while installing'
+# https://github.com/tmux-plugins/tpm/issues/17#issuecomment-68501952
+sed -i '1s/\r//' ~/.tmux/plugins/tpm/tpm
 
 
 # setup aliases and variables

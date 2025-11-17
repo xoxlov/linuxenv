@@ -2,6 +2,8 @@
 
 sudo apt install -y vim
 sudo apt install -y tmux
+sudo apt install -y xdg-utils # required for correct plugins installation for tmux
+                              # see https://wiki.archlinux.org/title/Xdg-utils
 sudo apt install -y openssh-server
 sudo systemctl enable ssh
 sudo apt install -y iptables
