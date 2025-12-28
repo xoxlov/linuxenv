@@ -12,6 +12,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sed -i '1s/\r//' ~/.tmux/plugins/tpm/tpm
 
 
+# TODO: удалить из основного bashrc все алиасы
 # setup aliases and variables
 cp ./res/.bash_aliases ~/
 cp ./res/.bash_env_var ~/
@@ -33,5 +34,5 @@ fi
 cat ./res/bash_git >> ${RCFILE}
 
 
-# create tempporary directory at $HOME
+# create temporary directory at $HOME
 mkdir -p ${HOME}/tmp
