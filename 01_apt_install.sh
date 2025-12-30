@@ -52,6 +52,7 @@ sudo apt install -y xrdp xorgrdp
 
 sudo apt install -y python3
 sudo apt install -y python3-pip
+sudo apt install -y python3-venv
 sudo apt install -y ipython3
 pip install --upgrade pip
 # add soft link from python to python3
@@ -62,7 +63,8 @@ sudo apt install -y binutils
 sudo apt install -y build-essential
 # TODO: проверить установку qemu в зависимости от платформы
 # TODO: проверить статью https://losst.pro/ustanovka-kvm-ubuntu-16-04
-sudo apt install qemu-system-x86 # qemu-kvm
+sudo apt install -y qemu-system-x86 # qemu-kvm
+sudo apt install -y bridge-utils # brctl, also used for qemu
 # sudo apt install -y gcc-9 g++-9 gcc-10 g++-10 gcc-11 g++-11 g++-12 gcc-12 g++-13 gcc-13 g++-14 gcc-14
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-14 90 --slave /usr/bin/g++ g++ /usr/bin/g++-14 --slave /usr/bin/gcov gcov /usr/bin/gcov-13
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 80 --slave /usr/bin/g++ g++ /usr/bin/g++-13 --slave /usr/bin/gcov gcov /usr/bin/gcov-13
