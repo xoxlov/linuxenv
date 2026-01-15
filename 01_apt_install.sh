@@ -13,6 +13,7 @@ sudo apt install -y mc
 sudo apt install -y curl
 sudo apt install -y cmake
 sudo apt install -y net-tools
+sudo apt install -y traceroute
 sudo apt install -y doublecmd-gtk
 sudo apt install -y htop
 sudo apt install -y atop
@@ -62,7 +63,7 @@ sudo ln -s /usr/bin/python3 /usr/bin/python
 sudo apt install -y binutils
 sudo apt install -y build-essential
 # TODO: проверить установку qemu в зависимости от платформы
-# TODO: проверить статью https://losst.pro/ustanovka-kvm-ubuntu-16-04
+# [Как установить и пользоваться QEMU](https://selectel.ru/blog/tutorials/qemu/)
 sudo apt install -y qemu-system-x86 # qemu-kvm
 sudo apt install -y bridge-utils # brctl, also used for qemu
 # sudo apt install -y gcc-9 g++-9 gcc-10 g++-10 gcc-11 g++-11 g++-12 gcc-12 g++-13 gcc-13 g++-14 gcc-14
