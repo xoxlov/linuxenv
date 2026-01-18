@@ -8,7 +8,7 @@ pacman -S --no-confirmation tmux
 pacman -S --no-confirmation mc
 pacman -S --no-confirmation binutils
 pacman -S --no-confirmation base-devel
-pacman -S --no-confirmation
+pacman -S --no-confirmation less
 pacman -S --no-confirmation
 pacman -S --no-confirmation
 pacman -S --no-confirmation
