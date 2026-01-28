@@ -13,6 +13,12 @@ sudo apt install -y mc
 sudo apt install -y curl
 sudo apt install -y cmake
 sudo apt install -y net-tools
+#sudo apt install -y wireshark  # interactive!
+# Добавить текущего пользователя в группу Wireshark
+#sudo usermod -aG wireshark $USER
+# Установить права для dumpcap для захвата пакетов без привилегий суперпользователя
+# только для Fedora, Rocky Linux и RHEL!
+#sudo setcap cap_net_raw,cap_net_admin=eip $(which dumpcap)
 sudo apt install -y traceroute
 sudo apt install -y doublecmd-gtk
 sudo apt install -y htop

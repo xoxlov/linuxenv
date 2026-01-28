@@ -31,13 +31,53 @@ alias updatemore="sudo apt install -y $(apt list --upgradable 2>/dev/null | sed 
 alias install="sudo apt install"
 alias dc="doublecmd &"
 alias h="history"
-alias gh="history | grep"
+alias hh="history | egrep -i --color=auto"
+alias hgrep="history | grep"
 alias path="echo -e ${PATH//:/\\n}"
 alias ports='netstat -tulanp'
-alias ccat="highlight --out-format=ansi"
-alias bat="batcat"
+alias ccat='highlight --out-format=ansi'
+alias bat='batcat'
 
-# xoxlov: работа с пмятью и процессами
+# xoxlov: https://ru.wikibooks.org/wiki/Настольная_книга_по_Linux
+# Поиск запущеных приложений по имени
+alias psgrep='ps aux | grep --color=auto $(echo "$1" | sed "s/^\(.\)/[\1]/g")'
+# alias psgrep='ps aux | egrep -i --color=auto'
+
+## Список отсортированных по размеру директорий в текущей рабочей директории
+#alias dirsz='du -s `pwd`/* | sort -nr | cut -f 2- | while read a; do du -sh "$a"; done'
+#
+## Открыть доступ к директории через HTTP-сервер в библиотеке Python.
+## Сервер слушает порт 8000.
+#alias sharethis='python -m SimpleHTTPServer'
+
+# Пинг публичного dns-сервера
+alias p='ping 8.8.8.8 -A'
+
+## Выводит внешний IP-адрес вашего интернет-шлюза
+#myip(){ lynx --dump 2ip.ru | egrep -o '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}' | uniq; }
+## или
+#myip(){ curl -s checkip.dyndns.org | sed 's/[^0-9.]//g'; }
+## или
+#myip(){ curl ifconfig.me; }
+#
+## Убить процессы по имени исполняемого файла
+#ki() {
+#   [[ $1 = '' ]] || [[ $1 = '-h' ]] || [[ $1 = '--help' ]] && echo "usage: $0 <program1..programN>" && return 1
+#   for process in $*; do
+#	  { kill -9 `pidof $process` 2>/dev/null && echo "$process" killed; } ||
+#	  { echo $process not found: seems like nothing to kill; }
+#   done
+#}
+#
+## Вывести файл без комментариев и пустых строк
+## Пример: gr /etc/fstab
+#gr(){ egrep -v '^#|^$' "$1"; }
+#
+## Генерирование 10-и запоминаемых восьмизначных паролей (pwgen -B 8 10), c цифрами (-n), с буквами из верхнего регистра (-с), и вычислить MD5-хеш к нему.
+#alias pwg='pwgen -cnB 8 10 | while read PASS; do echo -n -e "$PASS\t"; echo -n "$PASS" | md5sum | cut -f1 -d" "; done'
+
+
+# xoxlov: работа с памятью и процессами
 alias meminfo='free -m -l -t'
 # Показать процессы, потребляющие больше всего памяти
 alias psmem='ps auxf | sort -nr -k 4'
